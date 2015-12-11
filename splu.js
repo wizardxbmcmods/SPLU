@@ -1519,8 +1519,9 @@
         var thumbDiv='<a><img src="'+metas[i].getAttribute("content").slice(0,-4)+'_mt'+metas[i].getAttribute("content").slice(-4)+'"/></a>';
       }
       if(metas[i].getAttribute("name")=="og:url"){
-        SPLUgameID=metas[i].getAttribute("content").substring(($(location).attr('href').split( '/' );
-console.log( url[ url.length - 2 ] )); 
+		SPLUgameID=metas[i].getAttribute("content").substring((metas[i].getAttribute("content").split( '/' );
+		console.log( url[ url.length - 2 ] ));
+        document.getElementById('objectid9999').value=SPLUgameID;
         document.getElementById('objectid9999').value=SPLUgameID;
         document.getElementById('selimage9999').innerHTML=thumbDiv;
         return SPLUgameID;
