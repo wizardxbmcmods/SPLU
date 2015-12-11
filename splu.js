@@ -1,7 +1,7 @@
 // SPLU 5.5.0 Beta
 
     //Check if they aren't on a BGG site and alert them to that fact.
-    if(window.location.host.slice(-17)!="boardgamegeek.com" &&  window.location.host.slice(-17)!="videogamegeek.com" && window.location.host.slice(-11)!="rpggeek.com" && window.location.host.slice(-6)!="bgg.cc" && window.location.host.slice(-10)!="geekdo.com"){
+    if(window.location.host.slice(-17)!="boardgamegeek.com" &&  window.location.host.slice(-17)!="videogamegeek.com" && window.location.host.slice(-11)!="rpggeek.com" && window.location.host.slice(-6)!="bgg.cc" && window.location.host.slice(-10)!="geekdo.com" && window.location.host.slice(-9)!="yucata.de"){
       alert("You must be on a BGG website to run SPLU.");
       throw new Error("You aren't on a BGG site.");
     }
