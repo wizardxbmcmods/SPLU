@@ -2,9 +2,7 @@
 
     //Check if they aren't on a BGG site and alert them to that fact.
     if(window.location.host.slice(-17)!="boardgamegeek.com" &&  window.location.host.slice(-17)!="videogamegeek.com" && window.location.host.slice(-11)!="rpggeek.com" && window.location.host.slice(-6)!="bgg.cc" && window.location.host.slice(-10)!="geekdo.com"){
-      alert("You must be on a BGG website to run SPLU.");
-      throw new Error("You aren't on a BGG site.");
-	  window.location.href = 'http://www.boardgamegeek.com';
+      window.location.href = 'http://www.boardgamegeek.com';
     }
     //Check if SPLU is already open, throw an error if not
     if(document.getElementById('SPLUwindow')){throw new Error("SPLU Already Running");}
