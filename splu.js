@@ -1,10 +1,9 @@
 // SPLU 5.5.0 Beta
 
     //Check if they aren't on a BGG site and alert them to that fact.
-	var Mywindow as window
     if(window.location.host.slice(-17)!="boardgamegeek.com" &&  window.location.host.slice(-17)!="videogamegeek.com" && window.location.host.slice(-11)!="rpggeek.com" && window.location.host.slice(-6)!="bgg.cc" && window.location.host.slice(-10)!="geekdo.com"){
-      mywindow.open("http://www.boardgamegeek.com", "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
-	  mywindow.focus();
+      window.open("http://www.boardgamegeek.com", "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
+	  window.focus();
 	  //mywindow.location.href = "javascript:(function(){if(typeof SPLU=="undefined"){var SPLUscript=document.createElement('script');SPLUscript.type="text/javascript";SPLUscript.src='https://rawgit.com/wizardxbmcmods/SPLU/master/splu.js';document.body.appendChild(SPLUscript);}else{if(!document.getElementById('SPLUwindow')){initSPLU();}}})();";
     }
     //Check if SPLU is already open, throw an error if not
