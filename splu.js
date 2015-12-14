@@ -1,13 +1,16 @@
 // SPLU 5.5.0 Beta
 
     //Check if they aren't on a BGG site and alert them to that fact.
-    if(window.location.host.slice(-17)!="boardgamegeek.com" &&  window.location.host.slice(-17)!="videogamegeek.com" && window.location.host.slice(-11)!="rpggeek.com" && window.location.host.slice(-6)!="bgg.cc" && window.location.host.slice(-10)!="geekdo.com" && window.location.host.slice(-9)!="yucata.de"){
+    if(window.location.host.slice(-17)!="boardgamegeek.com" &&  window.location.host.slice(-17)!="videogamegeek.com" && window.location.host.slice(-11)!="rpggeek.com" && window.location.host.slice(-6)!="bgg.cc" && window.location.host.slice(-10)!="geekdo.com"){
       alert("You must be on a BGG website to run SPLU.");
       throw new Error("You aren't on a BGG site.");
+	  window.location.href = 'http://www.boardgamegeek.com';
     }
     //Check if SPLU is already open, throw an error if not
     if(document.getElementById('SPLUwindow')){throw new Error("SPLU Already Running");}
-
+	
+	
+	
     var LoggedInAs = document.getElementsByClassName('menu_login')[0].childNodes[3].childNodes[1].innerHTML;
     //Check if the user is logged in to BGG, throw an error if not
     if(LoggedInAs==""){alert("You aren't logged in.");throw new Error("You aren't logged in.");}
@@ -1519,9 +1522,7 @@
         var thumbDiv='<a><img src="'+metas[i].getAttribute("content").slice(0,-4)+'_mt'+metas[i].getAttribute("content").slice(-4)+'"/></a>';
       }
       if(metas[i].getAttribute("name")=="og:url"){
-		SPLUgameID=$(location).attr('href').split( '/' );
-console.log( url[ url.length - 2 ] ); // projects
-        document.getElementById('objectid9999').value=SPLUgameID;
+        SPLUgameID=metas[i].getAttribute("content").substring((metas[i].getAttribute("content").lastIndexOf("/")+1));
         document.getElementById('objectid9999').value=SPLUgameID;
         document.getElementById('selimage9999').innerHTML=thumbDiv;
         return SPLUgameID;
