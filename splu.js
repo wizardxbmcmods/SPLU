@@ -9,9 +9,7 @@
     //Check if SPLU is already open, throw an error if not
     if(document.getElementById('SPLUwindow')){throw new Error("SPLU Already Running");}
 	
-	
-	
-    var LoggedInAs = document.getElementsByClassName('menu_login')[0].childNodes[3].childNodes[1].innerHTML;
+	var LoggedInAs = document.getElementsByClassName('menu_login')[0].childNodes[3].childNodes[1].innerHTML;
     //Check if the user is logged in to BGG, throw an error if not
     if(LoggedInAs==""){alert("You aren't logged in.");throw new Error("You aren't logged in.");}
     var SPLUversion="5.5.0";
