@@ -2,9 +2,7 @@
 
     //Check if they aren't on a BGG site and alert them to that fact.
     if(window.location.host.slice(-17)!="boardgamegeek.com" &&  window.location.host.slice(-17)!="videogamegeek.com" && window.location.host.slice(-11)!="rpggeek.com" && window.location.host.slice(-6)!="bgg.cc" && window.location.host.slice(-10)!="geekdo.com"){
-      var strWindowFeatures = "location=yes,height=570,width=520,scrollbars=yes,status=yes";
-	var URL = "http://www.boardgamegeek.com;
-	var win = window.open(URL, "_blank", strWindowFeatures);
+      window.open("http://www.boardgamegeek.com", "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
 	  //window.location.href = 'http://www.boardgamegeek.com';
     }
     //Check if SPLU is already open, throw an error if not
