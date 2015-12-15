@@ -15,7 +15,7 @@
     //Check if SPLU is already open, throw an error if not
     if(document.getElementById('SPLUwindow')){throw new Error("SPLU Already Running");}
 	
-	
+	document.getElementById('objectid9999').value = "Marco Polo";
 	
 	var LoggedInAs = document.getElementsByClassName('menu_login')[0].childNodes[3].childNodes[1].innerHTML;
     //Check if the user is logged in to BGG, throw an error if not
@@ -1154,7 +1154,7 @@
     tmp2.setMinutes(tmp.getMinutes()-tmp.getTimezoneOffset())
     SPLUcalendar.cfg.setProperty("maxdate",tmp2);
     SPLUcalendar.selectEvent.subscribe(function(){tmp3=new Date();selectedDate=new Date(SPLUcalendar.getSelectedDates()[0].setMinutes(SPLUcalendar.getSelectedDates()[0].getMinutes()-tmp3.getTimezoneOffset()));setDateField(selectedDate.toISOString().slice(0,selectedDate.toISOString().indexOf("T")));showHideCalendar();});
-    document.getElementById('q546e9ffd96dfc').value="Marco Polo";
+    document.getElementById('q546e9ffd96dfc').value=getGameTitle();
     
     var tmpDiv=document.createElement('span');
     tmpDiv.style.display="none";
