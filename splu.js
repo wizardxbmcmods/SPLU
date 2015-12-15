@@ -1,12 +1,11 @@
 // SPLU 5.5.0 Beta
-
+function myFunction() {
     //Check if they aren't on a BGG site and alert them to that fact.
     if(window.location.host.slice(-17)!="boardgamegeek.com" &&  window.location.host.slice(-17)!="videogamegeek.com" && window.location.host.slice(-11)!="rpggeek.com" && window.location.host.slice(-6)!="bgg.cc" && window.location.host.slice(-10)!="geekdo.com"){
       window.open("http://www.boardgamegeek.com", "_parent", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
+	  myfunction();
 	  //window.focus();
 	  //window.location.href("http://www.google.com");
-	  
-	  javascript:(function(){if(typeof SPLU=="undefined"){var SPLUscript=document.createElement('script');SPLUscript.type="text/javascript";SPLUscript.src='https://rawgit.com/wizardxbmcmods/SPLU/master/splu.js';document.body.appendChild(SPLUscript);}else{if(!document.getElementById('SPLUwindow')){initSPLU();}}})();
 	  
 	  //window.location.href = "javascript:(function(){if(typeof SPLU=="undefined"){var SPLUscript=document.createElement('script');SPLUscript.type="text/javascript";SPLUscript.src='https://rawgit.com/wizardxbmcmods/SPLU/master/splu.js';document.body.appendChild(SPLUscript);}else{if(!document.getElementById('SPLUwindow')){initSPLU();}}})();";
     }
@@ -3164,7 +3163,7 @@
       loadPlays(document.getElementById('SPLU.PlaysLogger').value,false);
     }
   }
-  
+}
   function highlightFilterTypeButton(type){
     buttonBoard=document.getElementById('SPLUtypeFilterButtonBoard');
     buttonVideo=document.getElementById('SPLUtypeFilterButtonVideo');
