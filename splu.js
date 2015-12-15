@@ -1,14 +1,17 @@
 // SPLU 5.5.0 Beta
-function myFunction() {
-    //Check if they aren't on a BGG site and alert them to that fact.
-    if(window.location.host.slice(-17)!="boardgamegeek.com" &&  window.location.host.slice(-17)!="videogamegeek.com" && window.location.host.slice(-11)!="rpggeek.com" && window.location.host.slice(-6)!="bgg.cc" && window.location.host.slice(-10)!="geekdo.com"){
-      window.open("http://www.boardgamegeek.com", "_parent", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
-	  myfunction();
-	  //window.focus();
-	  //window.location.href("http://www.google.com");
-	  
-	  //window.location.href = "javascript:(function(){if(typeof SPLU=="undefined"){var SPLUscript=document.createElement('script');SPLUscript.type="text/javascript";SPLUscript.src='https://rawgit.com/wizardxbmcmods/SPLU/master/splu.js';document.body.appendChild(SPLUscript);}else{if(!document.getElementById('SPLUwindow')){initSPLU();}}})();";
+
+        //Check if they aren't on a BGG site and alert them to that fact.
+    if(window.location.host.slice(-17)!="boardgamegeek.com" &&  window.location.host.slice(-17)!="videogamegeek.com" && window.location.host.slice(-11)!="rpggeek.com" && window.location.host.slice(-6)!="bgg.cc" && window.location.host.slice(-10)!="geekdo.com" && window.location.host.slice(-9)!="yucata.de"){
+      alert("You must be on a BGG website or Yucata.de to run SPLU.");
+      throw new Error("You aren't on a BGG site.");
     }
+	
+    //Check if SPLU is already open, throw an error if not
+    if(window.location.host.slice(-9)!="yucata.de"){
+      window.open("http://www.boardgamegeek.com", "_parent", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
+	  
+ }
+	
     //Check if SPLU is already open, throw an error if not
     if(document.getElementById('SPLUwindow')){throw new Error("SPLU Already Running");}
 	
@@ -3163,7 +3166,7 @@ function myFunction() {
       loadPlays(document.getElementById('SPLU.PlaysLogger').value,false);
     }
   }
-}
+
   function highlightFilterTypeButton(type){
     buttonBoard=document.getElementById('SPLUtypeFilterButtonBoard');
     buttonVideo=document.getElementById('SPLUtypeFilterButtonVideo');
@@ -3712,7 +3715,7 @@ function myFunction() {
     }
     setObjectType(tmpPlay.getElementsByTagName("subtypes")[0].getElementsByTagName("subtype")[0].getAttribute("value"));
     tmpItem=tmpPlay.getElementsByTagName("item")[0];
-    SetInstantSearchObject({itemid:'9999',objecttype:tmpItem.attributes.objecttype.value,objectid:tmpItem.attributes.objectid.value, name:tmpItem.attributes.name.value,uniqueid:'546e9ffd96dfc'} );
+    SetInstantSearchObject({itemid:'Marco Polo',objecttype:tmpItem.attributes.objecttype.value,objectid:tmpItem.attributes.objectid.value, name:tmpItem.attributes.name.value,uniqueid:'546e9ffd96dfc'} );
     if(document.getElementById("SPLU.PlaysLogger").value==LoggedInAs&&!SPLUplayData[document.getElementById("SPLU.PlaysLogger").value][id].deleted){
       showHideEditButtons("show");
     }else{
