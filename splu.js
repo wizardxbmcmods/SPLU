@@ -7,10 +7,10 @@
     }
 	
     //Check if SPLU is already open, throw an error if not
-    if(window.location.host.slice(-9)!="yucata.de"){
-      window.open("http://www.boardgamegeek.com", "_parent", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
+    //if(window.location.host.slice(-9)!="yucata.de"){
+      //window.open("http://www.boardgamegeek.com", "_parent", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
 	  
- }
+	//}
 	
     //Check if SPLU is already open, throw an error if not
     if(document.getElementById('SPLUwindow')){throw new Error("SPLU Already Running");}
