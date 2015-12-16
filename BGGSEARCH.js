@@ -1,7 +1,7 @@
 function myFunction() {
-var url = window.location.href
+var url = window.location.href;
 var arr = url.split("/");
-var result = arr[2]
+var result = arr[2];
 
     var person = prompt("Please enter your name", result );
     
